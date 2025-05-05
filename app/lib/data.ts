@@ -14,7 +14,7 @@ export async function fetchRevenue() {
   try {
     const data = await sql<Revenue[]>`SELECT * FROM revenue`;
     return data;
-  } catch (error) {
+  } catch {
     throw new Error('Failed to fetch revenue data.');
   }
 }
